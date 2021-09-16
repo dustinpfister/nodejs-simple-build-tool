@@ -1,14 +1,5 @@
-const UglifyJS = require("uglify-js"),
-path = require('path'),
-fs = require('fs');
+const path = require('path'),
 
-fs.readFile(path.join(__dirname, 'test.js'), 'utf8', function (e, code) {
+buildTool = require( path.join(__dirname, 'build-tool.js') );
 
-    if (code) {
-        var result = UglifyJS.minify(code);
-        console.log(result.code);
-    } else {
-        console.log(e);
-    }
-
-});
+buildTool.createDist
