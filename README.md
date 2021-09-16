@@ -14,6 +14,38 @@ The basic process of this should still  be as follows.
 * write a development output javaScript file to an output location such as /dist/\[Project.name\].js
 * minify the development output, and write it to a location like /dist/\[Project.name\]min.js
 
-## Minify JavaScript code
+## How to Minify JavaScript code
 
-I decided to [go with uglify](https://www.npmjs.com/package/uglify-js) for this
+I decided to [go with uglify](https://www.npmjs.com/package/uglify-js) for this. I have not done a great deal of testing with the dependency however it does produce a desired output for what I want this kind of dependency for.
+
+This development input:
+
+```js
+var gameMod = (function () {
+
+    // public API
+    var api = {};
+
+    // a private method
+    var add = function (a, b) {
+        return a + b;
+    };
+
+    // a pubic API method
+    api.func1 = function (a, b) {
+        return a + b;
+    }
+
+    // return the public api
+    return api;
+
+}
+    ())
+
+```
+
+results in this output after running it threw uglify:
+
+```js
+var gameMod=function(){var n={};return n.func1=function(n,r){return n+r},n}();
+```
