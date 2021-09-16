@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-simple-build-tool",
+  "version": "0.0.0",
+  "description": "A simple nodejs build tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dustinpfister/nodejs-simple-build-tool.git"
+  },
+  "keywords": [
+    "build",
+    "tool",
+    "javascript"
+  ],
+  "author": "Dustin Pfister",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/dustinpfister/nodejs-simple-build-tool/issues"
+  },
+  "homepage": "https://github.com/dustinpfister/nodejs-simple-build-tool#readme",
+  "dependencies": {
+    "minify": "^7.0.2"
+  }
+}
