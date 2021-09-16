@@ -6,13 +6,22 @@ fs = require('fs');
 const api = {};
 
 // create a dist object
-api.createDist = (opt) => {
+api.createDistObj = (opt) => {
     opt = opt || {};
-
+    // the starting dist object
     let dist = {
-        sourceCode : opt.sourceCode || ''
+        sourceCode : opt.sourceCode || '',
+        minCode : '',
+        error: null
     };
-
+    // try to use uglify.js and set dist.minCode or dist.error
+    let ugly = UglifyJS.minify(dist.sourceCode);
+    if(ugly.error){
+        dist.error = ugly.error;
+    }else{
+        dist.minCode = ugly.code;
+    }
+    // return the dist object
     return dist;
 };
 
