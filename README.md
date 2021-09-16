@@ -10,6 +10,7 @@ The basic process of this should still  be as follows.
 * build-config.json should have a list of paths relative to dir_root to development source files
 * build-config.json should have a string that will be some comments to place at the top of the output file
 * build-config.json should have a fileName prop that is the fileName to use for the output files
+* if a package.json file is found a version, license, and author prop will be used in place of build-config settings for these values
 * write a development output javaScript file to an output location such as /dist/\[Project.name\].js
 * minify the development output, and write it to a location like /dist/\[Project.name\]min.js
 
