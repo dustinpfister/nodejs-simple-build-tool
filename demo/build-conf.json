@@ -1,0 +1,10 @@
+{
+  "fileName": "test_script",
+  "dir_root": "./",
+  "dir_target": "./dist",
+  "topString": "",
+  "bottomString": "",
+  "sourceFiles": [
+     "./src/file1.js", "./src/file2.js", "./src/file3.js"
+  ]
+}
