@@ -14,4 +14,6 @@ The basic process of this should still  be as follows.
 * write a development output javaScript file to an output location such as /dist/\[Project.name\].js
 * minify the development output, and write it to a location like /dist/\[Project.name\]min.js
 
-## 
+## Minify JavaScript code
+
+I decided to [go with uglify](https://www.npmjs.com/package/uglify-js) for this
