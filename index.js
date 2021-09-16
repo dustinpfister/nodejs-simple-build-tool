@@ -1,5 +1,14 @@
-var UglifyJS = require("uglify-js");
+const UglifyJS = require("uglify-js"),
+path = require('path'),
+fs = require('fs');
 
-var result = UglifyJS.minify(code);
+fs.readFile(path.join(__dirname, 'test.js'), 'utf8', function (e, code) {
 
-console.log( result.code );
+    if (code) {
+        var result = UglifyJS.minify(code);
+        console.log(result.code);
+    } else {
+        console.log(e);
+    }
+
+});
