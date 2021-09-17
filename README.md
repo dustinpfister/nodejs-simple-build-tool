@@ -1,6 +1,6 @@
 # nodejs-simple-build-tool
 
-This is my take on a simple nodejs build tool for the sake of createing a dist folder from a collection of source code files. I do not care to make something that is packed with features for this one, I just want a basic tool that will work, and move on with things. 
+This is my take on a simple nodejs build tool for the sake of creating a dist folder from a collection of source code files. I do not care to make something that is packed with features for this one, I just want a basic tool that will work, and move on with things. 
 
 Event when it comes to keeping this basic the process of this should still be as follows.
 
@@ -52,11 +52,11 @@ The dist folder can then be built for the demo by calling index.js file and givi
 $ node index demo/build-conf.json
 ```
 
-The build-conf.json file as well as the other assets can be tought of as an example for how this will work
+The build-conf.json file as well as the other assets can be thought of as an example for how this will work
 
 ### Using from another script
 
-I will not be taking the time to write about the full api at this time as a lot might change. However there is always looking at the index.js file in the root of this folder to get an indea.
+I will not be taking the time to write about the full api at this time as a lot might change. However there is always looking at the index.js file in the root of this folder to get an idea.
 
 ```js
 const path = require('path'),

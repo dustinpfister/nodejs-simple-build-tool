@@ -10,14 +10,14 @@
 
 ## (   ) - 0.2.0 - buildTool.build method
 * take what was worked out in /index.js and make it into a buildTool.build method
-* the buildTool.build method shoud just need a dir to a conf.json, or an object literal with the same values
+* the buildTool.build method should just need a dir to a conf.json, or an object literal with the same values
 * the /index.js file should use builtTool.build
 
 ## ( done 09/17/2021 ) - 0.1.0 - buildTool.readConf method
 * (done) have a buildTool.readConf method that will read a buld-conf.json 
 * (done) the result of buildTool.readConf should be an options object to use with buildTool.createSource
 * (done) update /index.js to use buildTool.readConf over the hard coded object in index.js
-* (done) make it so that the one and only argument given to /index.js is a dir to a build-onf.json
+* (done) make it so that the one and only argument given to /index.js is a dir to a build-conf.json
 
 ## ( done 09/16/2021 ) - 0.0.0 - first release
 * (done) readme file and todo list
