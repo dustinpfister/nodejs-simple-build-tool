@@ -13,6 +13,24 @@ Event when it comes to keeping this basic the process of this should still be as
 * write a development output javaScript file to an output location such as /dist/\[Project.name\].js
 * minify the development output, and write it to a location like /dist/\[Project.name\]min.js
 
+## The build.conf JSON file format
+
+So far the format of the build-conf-json file looks something like this
+
+```json
+{
+  "fileName": "test_script",
+  "dir_root": "./",
+  "dir_target": "./dist",
+  "topString": "",
+  "bottomString": "",
+  "sourceFiles": [
+     "./src/file1.js", "./src/file2.js", "./src/file3.js"
+  ]
+}
+```
+
+A version property can also be set, if a package.json file is in the same folder as build-conf the version number there will be used.
 
 ## Uisng this build tool
 
@@ -22,17 +40,19 @@ This project as of this writing is still some what of a work in progress. Still 
 
 Clone the repo down and do an npm install
 
-```
+```bash
 $ git clone --depth 1 https://github.com/dustinpfister/nodejs-simple-build-tool
 $ cd nodejs-simple-build-tool
 $ npm install
 ```
 
-The dist folder can then be built by calling index.js file and giving the location of the build-conf json file. So then from the root folder of this project folder something like this should work.
+The dist folder can then be built for the demo by calling index.js file and giving the location of the build-conf json file. So then from the root folder of this project folder something like this should work.
 
-```
+```bash
 $ node index demo/build-conf.json
 ```
+
+The build-conf.json file as well as the other assets can be tought of as an example for how this will work
 
 ### Using from another script
 
