@@ -6,5 +6,7 @@
   "bottomString": "",
   "sourceFiles": [
      "./src/game.js", "./src/main.js"
-  ]
+  ],
+  "top": "(function(){\n\n",
+  "bottom": "\n}());"
 }
