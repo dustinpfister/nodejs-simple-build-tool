@@ -13,6 +13,61 @@ Event when it comes to keeping this basic the process of this should still be as
 * write a development output javaScript file to an output location such as /dist/\[Project.name\].js
 * minify the development output, and write it to a location like /dist/\[Project.name\]min.js
 
+
+## Uisng this build tool
+
+This project as of this writing is still some what of a work in progress. Still I think I should take a moment to write down how to use 0.1.0 of the build-tool thus far.
+
+### Using from the command line
+
+Clone the repo down and do an npm install
+
+```
+$ git clone --depth 1 https://github.com/dustinpfister/nodejs-simple-build-tool
+$ cd nodejs-simple-build-tool
+$ npm install
+```
+
+The dist folder can then be built by calling index.js file and giving the location of the build-conf json file. So then from the root folder of this project folder something like this should work.
+
+```
+$ node index demo/build-conf.json
+```
+
+### Using from another script
+
+I will not be taking the time to write about the full api at this time as a lot might change. However there is always looking at the index.js file in the root of this folder to get an indea.
+
+```js
+const path = require('path'),
+buildTool = require( path.join(__dirname, 'lib/build-tool.js') );
+// the uri of the file
+let uri_build_conf = process.argv[2] ||  path.join(process.cwd(), 'build-conf.json');
+// the options object
+let opt = {};
+// start by reading the json file
+buildTool.readConf(uri_build_conf)
+// append build-conf.json values to opt and create source
+.then((conf)=>{
+   opt = Object.assign(opt, conf);
+   return buildTool.createSource(opt);
+})
+// append opt.sourceCode and create dist options by calling createDist
+// then write dist
+.then((source)=>{
+   opt.sourceCode = source.code;
+   let dist = buildTool.createDistObj(opt);
+   return buildTool.writeDist(dist);
+})
+.then((dist) => {
+    console.log('dist folder created : ');
+    console.log('path: ' + dist.dir_target);
+})
+.catch((e) => {
+    console.log(e);
+});
+```
+
 ## Going with uglify to Minify JavaScript code
 
 I decided to [go with uglify](https://www.npmjs.com/package/uglify-js) for this. I have not done a great deal of testing with the dependency however it does produce a desired output for what I want this kind of dependency for.
