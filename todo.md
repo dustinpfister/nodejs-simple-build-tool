@@ -4,12 +4,12 @@
 * add a bin key to package.json
 * add a shebang to index.js and do a chmod 777 for it
 
-## (   ) - 0.2.0 - buildTool.build method
+## ( done 09/17/2021 ) - 0.2.0 - buildTool.build method
 * (done) take what was worked out in /index.js and make it into a buildTool.build method
 * (done) the buildTool.build method should just need a dir to a conf.json, or an object literal with the same values
 * (done) the /index.js file should use builtTool.build
-* can set a top and bottom string value in build-conf.json
-* the text of these top and bottom strings will show up on the top and bottom of the output file
+* (done) can set a top and bottom string value in build-conf.json
+* (done) the text of these top and bottom strings will show up on the top and bottom of the output file
 
 ## ( done 09/17/2021 ) - 0.1.0 - buildTool.readConf method
 * (done) have a buildTool.readConf method that will read a buld-conf.json 
