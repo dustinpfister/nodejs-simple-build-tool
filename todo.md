@@ -1,5 +1,9 @@
 # nodejs-simple-build-tool todo list
 
+## (   ) - 0.x.0 - global script
+* add a bin key to package.json
+* add a shebang to index.js and do a chmod 777 for it
+
 ## (   ) - 0.x.0 - top and bottom strings
 * can set a top and bottom string value in build-conf.json
 * the text of these top and bottom strings will show up on the top and bottom of the output file
