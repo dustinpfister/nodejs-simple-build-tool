@@ -5,6 +5,6 @@
   "topString": "",
   "bottomString": "",
   "sourceFiles": [
-     "./src/file1.js", "./src/file2.js", "./src/file3.js"
+     "./src/game.js", "./src/main.js"
   ]
 }
