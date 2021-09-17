@@ -1,7 +1,15 @@
 const path = require('path'),
 buildTool = require( path.join(__dirname, 'lib/build-tool.js') );
 
+let uri_build_conf = process.argv[2] ||  path.join(process.cwd(), 'build-conf.json');
 
+buildTool.readConf(uri_build_conf)
+.then((opt)=>{
+   console.log(opt);
+});
+
+
+/*
 let opt = {
     fileName: "test_script",
     dir_root: path.join(__dirname, 'demo'),
@@ -26,13 +34,4 @@ buildTool.createSource(opt)
 .catch((e) => {
     console.log(e);
 });
-
-
-/*
-let distObj = buildTool.createDistObj({
-    sourceCode : 'var n = 15;   \n\n\n var z = 5;'
-});
-
-console.log( distObj );
 */
-
