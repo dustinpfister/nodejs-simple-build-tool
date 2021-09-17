@@ -4,6 +4,9 @@
 * add a bin key to package.json
 * add a shebang to index.js and do a chmod 777 for it
 
+## (   ) - 0.x.0 - format the dev form of the output file
+* run the dev form of the output file there something that will make the javaScript follow some kind of standard.
+
 ## ( done 09/17/2021 ) - 0.2.0 - buildTool.build method
 * (done) take what was worked out in /index.js and make it into a buildTool.build method
 * (done) the buildTool.build method should just need a dir to a conf.json, or an object literal with the same values
